@@ -1,0 +1,108 @@
+{
+  "description": "Education-policy domain lexicon used to ensure important institutional terms are not missed by YAKE. Grouped by category. Each category has a weight used during importance scoring.",
+  "categories": {
+    "attendance": {
+      "weight": 1.3,
+      "terms": [
+        "minimum attendance", "attendance requirement", "attendance shortage",
+        "75%", "condonation", "shortage of attendance", "attendance percentage",
+        "insufficient attendance", "debarred"
+      ]
+    },
+    "fees": {
+      "weight": 1.5,
+      "terms": [
+        "fee", "non-refundable", "refund", "late fee", "penalty", "deposit",
+        "forfeit", "caution deposit", "tuition fee", "fee structure",
+        "outstanding dues", "fine", "arrears"
+      ]
+    },
+    "discipline": {
+      "weight": 1.8,
+      "terms": [
+        "disciplinary action", "suspension", "expulsion", "misconduct",
+        "debarred", "rustication", "warning", "show cause", "penalty",
+        "disciplinary committee"
+      ]
+    },
+    "hostel": {
+      "weight": 1.3,
+      "terms": [
+        "curfew", "visitor", "vacate", "hostel deposit", "room allocation",
+        "hostel fee", "mess charges", "leave", "gate closing", "roommate"
+      ]
+    },
+    "examination": {
+      "weight": 1.4,
+      "terms": [
+        "eligibility", "examination", "debarred", "malpractice", "backlog",
+        "re-examination", "supplementary", "internal assessment", "grade",
+        "hall ticket", "exam fee", "revaluation"
+      ]
+    },
+    "admission": {
+      "weight": 1.3,
+      "terms": [
+        "eligibility", "documents", "deadline", "cancellation", "admission fee",
+        "provisional admission", "migration certificate", "verification",
+        "seat allotment"
+      ]
+    },
+    "placement": {
+      "weight": 1.2,
+      "terms": [
+        "placement eligibility", "offer", "withdraw", "participation",
+        "debarred", "one offer", "placement policy", "company", "recruitment"
+      ]
+    },
+    "internship": {
+      "weight": 1.1,
+      "terms": [
+        "mandatory", "duration", "approval", "completion", "internship report",
+        "stipend", "training"
+      ]
+    },
+    "privacy": {
+      "weight": 1.4,
+      "terms": [
+        "personal data", "consent", "data sharing", "third party",
+        "information", "disclosure", "biometric", "photograph", "surveillance"
+      ]
+    },
+    "anti_ragging": {
+      "weight": 1.9,
+      "terms": [
+        "ragging", "suspension", "expulsion", "reporting", "anti-ragging",
+        "harassment", "criminal", "FIR", "affidavit"
+      ]
+    },
+    "scholarship": {
+      "weight": 1.2,
+      "terms": [
+        "eligibility", "renewal", "income", "disqualification", "merit",
+        "scholarship amount", "sanction", "reimbursement"
+      ]
+    },
+    "deadlines": {
+      "weight": 1.1,
+      "terms": [
+        "within", "before", "deadline", "working days", "last date",
+        "on or before", "not later than", "due date", "prescribed time"
+      ]
+    },
+    "restrictions": {
+      "weight": 1.3,
+      "terms": [
+        "shall not", "not permitted", "prohibited", "restricted", "not allowed",
+        "barred", "forbidden", "cannot"
+      ]
+    },
+    "consequences": {
+      "weight": 1.7,
+      "terms": [
+        "penalty", "forfeit", "suspend", "terminate", "expel", "debar",
+        "cancellation", "rejection", "disqualified", "liable"
+      ]
+    }
+  }
+}

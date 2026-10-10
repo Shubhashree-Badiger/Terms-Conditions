@@ -1,0 +1,5 @@
+# Virtual environment only - too large (1.4GB) and fully reproducible
+# from requirements.txt with: pip install -r backend/requirements.txt
+venv/
+.venv/
+env/

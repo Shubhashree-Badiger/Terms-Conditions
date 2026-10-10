@@ -1,0 +1,47 @@
+{
+  "description": "Model and pipeline configuration for the analyzer. Values here mirror backend/app/config.py and can be tuned without editing code.",
+  "spacy": {
+    "model": "en_core_web_sm",
+    "max_length": 2000000
+  },
+  "sbert": {
+    "model": "all-MiniLM-L6-v2",
+    "embedding_dim": 384,
+    "device": "cpu"
+  },
+  "summarizer": {
+    "model": "t5-small",
+    "prompt": "Summarize this educational policy clause in one simple sentence. Preserve all important numbers, percentages, dates, deadlines, conditions and consequences. Do not add information.",
+    "max_tokens": 48,
+    "min_tokens": 8,
+    "num_beams": 4,
+    "device": "cpu"
+  },
+  "yake": {
+    "language": "en",
+    "max_ngram_size": 3,
+    "dedup_limit": 0.9,
+    "top_k": 15
+  },
+  "importance": {
+    "_comment": "Centrality-first weights. 'centrality' = cosine(phrase, whole clause) via MiniLM, i.e. how much the phrase captures what the clause is about. This is the primary driver so highlights land on the clause's defining words rather than generic YAKE n-grams.",
+    "weights": {
+      "centrality": 0.32,
+      "constraint": 0.28,
+      "domain_match": 0.16,
+      "policy_rule": 0.12,
+      "anchor_semantic": 0.06,
+      "yake_rank": 0.06
+    },
+    "_constraint_note": "'constraint' rewards a clause's boundaries and consequences - thresholds like 80%, comparisons like 'less than 80%', conditions ('if ...'), and consequence spans ('shall not be permitted to appear for the exam'). Detected by ml/importance/constraint_extractor.py. A score floor also guarantees these are always highlighted.",
+    "thresholds": {
+      "high": 0.66,
+      "medium": 0.33
+    }
+  },
+  "phrase_selection": {
+    "_comment": "Tuned in Phase 17 against a real answer key (F1 0.29 -> 0.39).",
+    "min_score": 0.30,
+    "top_phrases_per_clause": 10
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "total_docs": 48,
+  "analyzed": 43,
+  "scanned": 5,
+  "error": 0,
+  "total_pages": 1129,
+  "total_clauses": 12055,
+  "total_phrases": 1095,
+  "mapped_phrases": 1080,
+  "failed_phrases": 15,
+  "summary_failures": 0,
+  "clause_errors": 0,
+  "total_seconds": 1345.9100000000008,
+  "mapping_success_rate": 98.6,
+  "avg_seconds_per_doc": 28.04,
+  "avg_clauses_per_doc": 280.3
+}

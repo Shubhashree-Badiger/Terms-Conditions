@@ -1,0 +1,165 @@
+{
+  "corpus": {
+    "total_docs": 48,
+    "analyzed": 43,
+    "scanned": 5,
+    "errors": 0,
+    "overall_mapping_success_rate": 98.6
+  },
+  "error_categories": [
+    {
+      "id": "E1",
+      "name": "Scanned / image-only PDFs (no extractable text)",
+      "count": 5,
+      "examples": [
+        "1575.pdf",
+        "CU Regulation Student Code of Conduct (1).pdf",
+        "Guidelines.pdf",
+        "socMed_Disciplinary.pdf",
+        "socMed_Guidelines.pdf"
+      ],
+      "impact": "Document cannot be analyzed at all; returns 'OCR required'.",
+      "handled_gracefully": true,
+      "recommendation": "Integrate an OCR fallback (e.g. Tesseract via pytesseract or PyMuPDF OCR) for image-only PDFs. Currently flagged, not processed."
+    },
+    {
+      "id": "E2",
+      "name": "Coordinate mapping failures",
+      "count": 15,
+      "rate": "1.37% of 1095 phrases",
+      "affected_docs": [
+        "2013_UG_Ordinances__Regulations_IITR.pdf",
+        "Academic_Programm-201219072012.pdf",
+        "UGAdmManual2024.pdf",
+        "UG_Ordinance_BoG_2025.pdf"
+      ],
+      "impact": "Phrase identified but cannot be highlighted in the PDF.",
+      "handled_gracefully": true,
+      "recommendation": "Improve multi-line / reflowed phrase search; add a word-coordinate fallback that assembles bboxes from the extractor's word list when search_for() misses."
+    },
+    {
+      "id": "E3",
+      "name": "Important-phrase recall gap",
+      "measured": {
+        "precision": 0.5,
+        "recall": 0.3125,
+        "f1": 0.3846,
+        "tp": 10,
+        "fp": 10,
+        "fn": 22,
+        "clauses_evaluated": 15
+      },
+      "impact": "System misses descriptive multi-word gold phrases.",
+      "root_cause": "YAKE + domain lexicon favor short keyword phrases; long descriptive spans (e.g. 'criminal proceeding', 'financial extortion') are never generated as candidates.",
+      "handled_gracefully": true,
+      "recommendation": "Expand education/risk lexicons (esp. legal/anti-ragging terms); add spaCy noun-chunk candidates; allow 4-5 word n-grams in YAKE for policy language."
+    },
+    {
+      "id": "E4",
+      "name": "Table-of-contents / front-matter captured as clauses",
+      "impact": "Noisy short 'clauses' (e.g. '1.0 Title & Commencement 04') with trailing page numbers inflate clause counts.",
+      "handled_gracefully": true,
+      "recommendation": "Detect and skip TOC pages (lines ending in a page number, dot-leaders); or drop clauses shorter than N chars with a trailing number pattern."
+    },
+    {
+      "id": "E5",
+      "name": "Summaries echo the clause (limited compression)",
+      "impact": "One-line summaries are faithful but not always shorter than the source for single-sentence clauses.",
+      "root_cause": "Base t5-small is not fine-tuned; extractive fallback returns the key sentence which for atomic clauses equals the clause.",
+      "handled_gracefully": true,
+      "recommendation": "Swap t5-small for a summarization-tuned checkpoint (e.g. flan-t5-base or a fine-tuned model) if abstractive compression is required."
+    }
+  ],
+  "mapping_failure_examples": [
+    {
+      "clause_id": "C041",
+      "phrase": "fine",
+      "page": 5,
+      "likely_cause": "not found on clause page (segmentation/ページ scope)"
+    },
+    {
+      "clause_id": "C087",
+      "phrase": "Proficiencies Co-Curricular Activities",
+      "page": 9,
+      "likely_cause": "contains punctuation/hyphen (tokenization mismatch)"
+    },
+    {
+      "clause_id": "C087",
+      "phrase": "Proficiencies Co-Curricular",
+      "page": 9,
+      "likely_cause": "contains punctuation/hyphen (tokenization mismatch)"
+    },
+    {
+      "clause_id": "C088",
+      "phrase": "Games Activities Athletics",
+      "page": 10,
+      "likely_cause": "mixed case multi-word (spacing/case mismatch)"
+    },
+    {
+      "clause_id": "C088",
+      "phrase": "Activities Athletics Football",
+      "page": 10,
+      "likely_cause": "mixed case multi-word (spacing/case mismatch)"
+    },
+    {
+      "clause_id": "C089",
+      "phrase": "Hobbies Activities Electronics",
+      "page": 10,
+      "likely_cause": "mixed case multi-word (spacing/case mismatch)"
+    },
+    {
+      "clause_id": "C089",
+      "phrase": "Activities Electronics Gardening",
+      "page": 10,
+      "likely_cause": "mixed case multi-word (spacing/case mismatch)"
+    },
+    {
+      "clause_id": "C147",
+      "phrase": "Commencement five-year Integrated",
+      "page": 15,
+      "likely_cause": "contains punctuation/hyphen (tokenization mismatch)"
+    },
+    {
+      "clause_id": "C150",
+      "phrase": "Centre Academic Committee",
+      "page": 15,
+      "likely_cause": "mixed case multi-word (spacing/case mismatch)"
+    },
+    {
+      "clause_id": "C158",
+      "phrase": "Centre Research Committee",
+      "page": 15,
+      "likely_cause": "mixed case multi-word (spacing/case mismatch)"
+    },
+    {
+      "clause_id": "C184",
+      "phrase": "IDD Commencement programmes",
+      "page": 19,
+      "likely_cause": "mixed case multi-word (spacing/case mismatch)"
+    },
+    {
+      "clause_id": "C184",
+      "phrase": "IDD Commencement",
+      "page": 19,
+      "likely_cause": "mixed case multi-word (spacing/case mismatch)"
+    },
+    {
+      "clause_id": "C184",
+      "phrase": "Commencement programmes",
+      "page": 19,
+      "likely_cause": "mixed case multi-word (spacing/case mismatch)"
+    },
+    {
+      "clause_id": "C204",
+      "phrase": "Centre Academic Committee",
+      "page": 19,
+      "likely_cause": "mixed case multi-word (spacing/case mismatch)"
+    },
+    {
+      "clause_id": "C204",
+      "phrase": "Academic Programme Committee",
+      "page": 19,
+      "likely_cause": "mixed case multi-word (spacing/case mismatch)"
+    }
+  ]
+}

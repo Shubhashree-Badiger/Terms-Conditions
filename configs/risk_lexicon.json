@@ -1,0 +1,170 @@
+{
+  "financial": {
+    "keywords": [
+      "non-refundable",
+      "penalty",
+      "fine",
+      "additional fee",
+      "forfeit",
+      "surcharge",
+      "late fee",
+      "deduction",
+      "charges",
+      "payment",
+      "deposit",
+      "caution money",
+      "fee structure",
+      "tuition fee",
+      "hostel fee",
+      "examination fee",
+      "registration fee",
+      "re-admission fee"
+    ],
+    "weight": 1.5,
+    "description": "Financial obligations, penalties, and fee-related clauses"
+  },
+  "academic": {
+    "keywords": [
+      "attendance",
+      "minimum percentage",
+      "debarred",
+      "eligibility",
+      "examination",
+      "internal assessment",
+      "marks",
+      "grade",
+      "backlog",
+      "re-examination",
+      "detained",
+      "promotion",
+      "credit",
+      "semester",
+      "academic year",
+      "CGPA",
+      "SGPA"
+    ],
+    "weight": 1.3,
+    "description": "Academic requirements, attendance rules, and examination eligibility"
+  },
+  "disciplinary": {
+    "keywords": [
+      "suspension",
+      "expulsion",
+      "rustication",
+      "disciplinary action",
+      "misconduct",
+      "malpractice",
+      "ragging",
+      "anti-ragging",
+      "punishment",
+      "debarment",
+      "warning",
+      "show cause",
+      "enquiry",
+      "committee"
+    ],
+    "weight": 1.8,
+    "description": "Disciplinary actions, penalties, and conduct-related clauses"
+  },
+  "privacy": {
+    "keywords": [
+      "personal data",
+      "third party",
+      "data sharing",
+      "information",
+      "consent",
+      "disclosure",
+      "confidential",
+      "privacy",
+      "biometric",
+      "photograph",
+      "identity",
+      "verification",
+      "surveillance",
+      "CCTV",
+      "monitoring"
+    ],
+    "weight": 1.4,
+    "description": "Privacy, data collection, and information sharing clauses"
+  },
+  "obligation": {
+    "keywords": [
+      "must",
+      "shall",
+      "required",
+      "mandatory",
+      "compulsory",
+      "obligatory",
+      "binding",
+      "compliance",
+      "adhere",
+      "abide",
+      "follow",
+      "submit"
+    ],
+    "weight": 1.0,
+    "description": "Mandatory obligations and requirements imposed on students"
+  },
+  "restriction": {
+    "keywords": [
+      "prohibited",
+      "cannot",
+      "will not",
+      "not allowed",
+      "restricted",
+      "banned",
+      "forbidden",
+      "not permitted",
+      "barred",
+      "denied"
+    ],
+    "weight": 1.2,
+    "description": "Restrictions and prohibitions placed on students"
+  },
+  "liability": {
+    "keywords": [
+      "liable",
+      "responsibility",
+      "risk",
+      "damage",
+      "loss",
+      "indemnity",
+      "not responsible",
+      "at own risk",
+      "no liability",
+      "disclaimer"
+    ],
+    "weight": 1.6,
+    "description": "Liability disclaimers and risk allocation clauses"
+  },
+  "termination": {
+    "keywords": [
+      "cancellation",
+      "termination",
+      "withdrawal",
+      "discontinuation",
+      "revocation",
+      "forfeiture",
+      "surrender",
+      "vacate"
+    ],
+    "weight": 1.5,
+    "description": "Termination, withdrawal, and cancellation conditions"
+  },
+  "deadline": {
+    "keywords": [
+      "deadline",
+      "last date",
+      "due date",
+      "within days",
+      "time limit",
+      "before",
+      "on or before",
+      "not later than",
+      "prescribed date",
+      "stipulated time"
+    ],
+    "weight": 1.1,
+    "description": "Time-bound conditions and deadlines"
+  }
+}

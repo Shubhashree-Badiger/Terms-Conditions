@@ -1,0 +1,33 @@
+# === Backend & API ===
+fastapi>=0.115.0
+uvicorn>=0.30.6
+python-multipart>=0.0.9
+pydantic>=2.9.2
+
+# === Database ===
+SQLAlchemy>=2.0.0
+
+# === PDF Processing (extraction + coordinates + highlighting) ===
+PyMuPDF>=1.24.13
+
+# === NLP & Keyword Extraction ===
+spacy>=3.8.0
+yake>=0.4.8
+
+# === Semantic Embeddings ===
+sentence-transformers>=3.1.1
+
+# === Summarization ===
+transformers>=4.44.2
+torch>=2.4.1
+
+# === Machine Learning Utilities ===
+scikit-learn>=1.5.2
+numpy>=1.26.4
+
+# === Testing ===
+pytest>=8.0.0
+httpx>=0.27.0
+
+# === Utilities ===
+python-dotenv>=1.0.1

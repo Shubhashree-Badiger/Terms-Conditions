@@ -1,0 +1,50 @@
+{
+  "document_id": "EDU_DOC_EVAL",
+  "mapping": {
+    "total_phrases": 132,
+    "mapped_phrases": 129,
+    "failed_phrases": 3,
+    "mapping_success_rate": 97.73,
+    "failures": [
+      {
+        "clause_id": "C076",
+        "phrase": "activities causing Debarring",
+        "page_start": 5
+      },
+      {
+        "clause_id": "C076",
+        "phrase": "causing Debarring",
+        "page_start": 5
+      },
+      {
+        "clause_id": "C081",
+        "phrase": "obscene Expulsion",
+        "page_start": 5
+      }
+    ]
+  },
+  "phrase_prf": {
+    "precision": 0.5,
+    "recall": 0.3125,
+    "f1": 0.3846,
+    "tp": 10,
+    "fp": 10,
+    "fn": 22,
+    "clauses_evaluated": 15
+  },
+  "summary_rouge": {
+    "rouge1": 0.2617,
+    "rouge2": 0.2026,
+    "rougeL": 0.2437,
+    "pairs_evaluated": 15
+  },
+  "performance": {
+    "documents_analyzed": 43,
+    "avg_seconds_per_document": 28.04,
+    "avg_seconds_per_clause": 0.1116,
+    "overall_mapping_success_rate": 98.6,
+    "total_pages": 1129,
+    "total_clauses": 12055,
+    "total_phrases": 1095
+  }
+}

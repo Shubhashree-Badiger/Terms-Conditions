@@ -1,0 +1,65 @@
+{
+  "document_id": "EDU_DOC_EVAL",
+  "clauses": {
+    "C001": [
+      "Ragging"
+    ],
+    "C002": [
+      "ragging-free institution"
+    ],
+    "C003": [
+      "strict action",
+      "criminal proceeding",
+      "cancellation of admission",
+      "found guilty of ragging",
+      "abetting ragging"
+    ],
+    "C005": [
+      "Ragging"
+    ],
+    "C006": [
+      "following acts",
+      "without intent to derive",
+      "student/s over any fresher"
+    ],
+    "C007": [
+      "effect of teasing",
+      "a fresher"
+    ],
+    "C008": [
+      "undisciplined activities",
+      "cause annoyance"
+    ],
+    "C009": [
+      "to perform something",
+      "generating a sense of shame"
+    ],
+    "C010": [
+      "distrubs",
+      "regular academic"
+    ],
+    "C011": [
+      "exploiting",
+      "services",
+      "one's own academic tasks"
+    ],
+    "C012": [
+      "financial extortion"
+    ],
+    "C013": [
+      "physical abuse",
+      "danger to health"
+    ],
+    "C014": [
+      "any act",
+      "discomfiture meted"
+    ],
+    "C015": [
+      "mental health",
+      "self-confidence"
+    ],
+    "C016": [
+      "physical or mental abuse"
+    ]
+  }
+}
